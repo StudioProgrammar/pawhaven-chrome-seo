@@ -1,0 +1,265 @@
+.navbar {
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    border-bottom: 1px gray solid;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+   /* background: linear-gradient(90deg, rgba(243, 243, 243, 1) 52%, rgba(170, 51, 106, 1) 100%);*/
+
+   background: linear-gradient(90deg, rgba(255, 255, 255, 1) 52%, rgba(255, 255, 255, 1) 52%, rgba(141, 182, 0, 1) 100%);
+}
+
+.other-side-container {
+    display: flex;
+
+}
+
+.logo {
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.icon {
+    width: 35px;
+}
+
+.logo-text {
+    font-size: 2.4rem;
+    font-family: var(--secondaryFont);
+    margin-left: 5px;
+    color: var(--darkPink);
+    font-weight: 500;
+}
+
+.button-container {
+    border: 2px purple solid;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.support-button {
+    padding: 15px 18px;
+    margin-right: 15px;
+    margin-left: 10px;
+
+    font-family: var(--secondaryFont);
+    font-size: 1.7rem;
+    text-align: center;
+
+    border: 2px solid var(--darkPink);
+    color: var(--darkPink);
+    font-weight: 700;
+    border-radius: 3px;
+    background-color: transparent;
+
+    transition: background-color 0.15s;
+    cursor: pointer;
+}
+
+.support-button:hover {
+    background-color: white;
+}
+
+.listing {
+    list-style: none;
+    display: flex;
+
+    justify-content: space-between;
+    padding-left: 0;
+
+    margin-right: 30px;
+    
+}
+
+.listing li a {
+    font-family: var(--secondaryFont);
+    color: var(--darkPink);
+    text-decoration: none;
+    font-size: 2.0rem;
+    font-weight: 500;
+
+    cursor: pointer;
+
+}
+
+.listing-mover {
+    display: flex;
+}
+
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px;
+}
+
+
+
+.top-line, .middle-line, .bottom-line {
+
+    width: 30px;
+    height: 3px;
+    background-color: black;
+
+}
+
+.middle-line {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    transition: margin 1s;
+}
+
+/*  HAMBURGER MENU LINE STUFF*/
+
+#check:checked ~ .checkBtn .hamburger-menu .middle-line {
+    margin: 0;
+    visibility: hidden;
+}
+
+#check:checked ~ .checkBtn .hamburger-menu .top-line {
+    margin-bottom: -4px;
+    animation: topLineChange 1s forwards;
+
+}
+
+#check:checked ~ .checkBtn .hamburger-menu .bottom-line {
+    margin-top: -2px;
+    animation: bottomLineChange 1s forwards;
+
+}
+
+@keyframes topLineChange {
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes bottomLineChange {
+    100% {
+        transform: rotate(-45deg);
+    }
+}
+
+
+
+
+.checkBtn {
+    display: none;
+    cursor: pointer;
+    align-self: center;
+}
+
+#check {
+    display: none;
+}
+
+
+@media (min-width: 1094px) {
+    .listing {
+        min-width: 700px;
+    }
+}
+
+@media (max-width: 1093px) {
+
+    .listing-mover {
+        position: fixed;
+        padding-top: 20px;
+        bottom: 0;
+        width: 100%;
+        left: -200%;
+        top: 101px;
+
+
+        display: flex;
+        justify-content: center;
+        background-color: #f6f6f6;;
+        
+
+        transition: left 1s;
+    }
+
+    .listing {
+        flex-direction: column;
+        min-width: none;
+        width: fit-content;
+        height: fit-content;
+        text-align: center;
+        justify-content: unset;
+        gap: 20px;
+        
+    }
+
+    .listing li a {
+        font-size: 2.3rem;
+    }
+
+
+    .checkBtn {
+        display: block;
+    }
+
+ /*   #check:checked ~ .checkBtn .hamburger-menu .top-line, 
+    .middle-line, .bottom-line {
+        background-color: blue;
+    } */
+
+
+
+
+
+    #check:checked ~ .listing-mover{
+        left: 0;
+    }
+
+
+
+
+
+
+}
+
+
+@media (max-width: 395px) {
+    .logo {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .support-button {
+        padding: 10px 14px;
+        margin-right: 15px;
+        margin-left: 10px;
+    
+        font-family: var(--secondaryFont);
+        font-size: 1.3rem;
+        text-align: center;
+    
+        border: 2px solid var(--darkPink);
+        color: var(--darkPink);
+        font-weight: 700;
+        border-radius: 3px;
+        background-color: transparent;
+    
+        transition: background-color 0.15s;
+        cursor: pointer;
+    }
+
+    .top-line, .middle-line, .bottom-line {
+
+        width: 20px;
+        height: 3px;
+        background-color: black;
+    
+    }
+}

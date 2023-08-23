@@ -1,0 +1,27 @@
+:root {
+    font-size: 62.5%;
+    --headerFont: Nunito, sans-serif;
+    --secondaryFont: Sarabun, sans-serif;
+    --appleGreen: #8DB600;
+    --darkPink: #AA336A;
+}
+
+body {
+    font-size: 1.6rem;
+
+    margin-top: 0;
+    margin-left: 0px;
+    margin-right: 0px;
+
+    margin-bottom: 0;
+
+
+
+    overflow-x: hidden;
+
+}
+
+html {
+    overflow-x: hidden;
+}
+
